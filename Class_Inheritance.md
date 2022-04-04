@@ -42,4 +42,4 @@ end
 
 sparky = GoodDog.new
 sparky.speak        # => "Hello! from GoodDog class"
-```
+
