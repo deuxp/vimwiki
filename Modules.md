@@ -53,3 +53,53 @@ Note:
 ie., a dog is an animal and has an ability to swim.
 - You cannot intantiate an object from a module. They are only for name-spacing
 and grouping common methods together.
+
+
+## More Uses for Modules
+
+### Name Spacing
+
+- organizing similar classes under one module
+
+```ruby
+module Mammal
+  class Dog
+    def speak(sound)
+      p "#{sound}"
+    end
+  end
+
+  class Cat
+    def say_name(name)
+      p "#{name}"
+    end
+  end
+end
+
+buddy = Mammal::Dog.new
+kitty = Mammal::Cat.new
+buddy.speak('Arf!')           # => "Arf!"
+kitty.say_name('kitty')       # => "kitty"
+```
+
+### Container
+
+Another use case is to use it as a container for methods. 
+- use for methods that seem out of place in your code.
+
+```ruby
+module Mammal
+  ...
+
+  def self.some_out_of_place_method(num)
+    num ** 2
+  end
+end
+
+value = Mammal.some_out_of_place_method(4)
+
+# or
+
+value = Mammal::some_out_of_place_method(4)
+```
+
