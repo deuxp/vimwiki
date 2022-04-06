@@ -2,7 +2,7 @@
 
 [source](https://launchschool.com/books/oo_ruby/read/inheritance)
 
-```
+```ruby
 class Animal
   def speak
     "Hello!"
@@ -33,7 +33,7 @@ on the right side.
 - An overriden method can still access the superclass' method with
   the `super` keyword.
 
-```
+```ruby
 class Animal
   def speak
     "Hello!"
@@ -56,7 +56,7 @@ sparky.speak        # => "Hello! from GoodDog class"
 
 The common way to use super is in the `initialize` method of the subclass
 
-```
+```ruby
 class Animal
   attr_accessor :name
 
@@ -81,7 +81,7 @@ That is why, in the example, 'brown' is passed as to `@name` in the super class.
 To control what params are passed up to the superclass, we use parenthesis on 
 the `super` keyword in the subclass `initialize` method
 
-```
+```ruby
 # ... code
 class BadDog < Animal
   def initialize(age, name)

@@ -4,7 +4,7 @@
 
 ## order of a lookup path
 
-```
+```ruby
 module Walkable
   def walk
     "I'm walking."
@@ -42,7 +42,7 @@ puts GoodDog.ancestors
 
 The above code produces the following output:
 
-```
+```ruby
 ---GoodDog method lookup---
 GoodDog
 Climbable

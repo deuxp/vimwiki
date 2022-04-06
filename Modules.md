@@ -12,7 +12,7 @@ offering the best solution in most circumstances, does not fit every scenario.
 Some subclasses may need to inherit a behaviour, while others might not and 
 therefore should't have unused methods hanging around.
 
-```
+```ruby
 module Swimmable
   def swim
     "I'm swimming!"
